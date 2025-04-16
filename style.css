@@ -151,6 +151,12 @@ border-radius: 5px;height: auto;font-weight: 700;
 #services img{
     width: 100%;
 }
+#services p{
+    font-size: 17px !important;
+}
+#services1 p{
+    font-size: 17px !important;
+}
 #talk ul li{
     color: #747474;
 }
