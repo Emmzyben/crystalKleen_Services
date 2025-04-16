@@ -303,7 +303,7 @@ button a{
   #uppest ul li{list-style-type: none;}
   #scrollToTopBtn {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     display: none;
     background-color: #ffc107;
@@ -360,7 +360,7 @@ button a{
 }
 #whatsapp-icon-container {
     position: fixed;
-    bottom: 80px;
+    bottom: 20px;
     right: 15px;
     z-index: 1000;
     display: flex;
@@ -402,6 +402,12 @@ button a{
     }
     #services1>a{
         width: 37%; height: 170px;
+    }
+    #services p{
+        font-size: 14px !important;
+    }
+    #services1 p{
+        font-size: 14px !important;
     }
     #talk,#talk2{
         flex-direction: column;justify-content: center;
@@ -465,7 +471,7 @@ button a{
         display: block;
         transition: 0.3s;
         line-height: 50px;
-        color: #747474;
+        color: #000000;
         font-family: 'Poppins', sans-serif;
         font-size: 15px;
         font-weight: 600;
