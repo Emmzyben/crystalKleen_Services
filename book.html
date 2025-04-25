@@ -5,6 +5,8 @@
     <title>The Happy House Cleaning Service</title>
     <link rel="stylesheet" href="style.css">
      <link rel="shortcut icon" href="images/logo.png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://kit.fontawesome.com/f0fb58e769.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -16,12 +18,11 @@
             <div class="head2">
                 <ul >
                     <a href=""></a>
-                                        <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="prices.html">Prices</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="book.html">Book Now</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li ><a href="about.html" >About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="reviews.php">Reviews</a></li>
+<li><a href="contact.html">Contact Us</a></li>
                     <li></li>
                  </ul>
             </div>
@@ -48,112 +49,95 @@
           <img src="images/logo.png" alt="" id="img"> 
         </div>
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="prices.html">Prices</a>
         <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+       <a href="reviews.php">Reviews</a>
         <a href="contact.html">Contact Us</a>
-        <a href="book.html">Book Now</a>
          </div>
        
        
       </div>
       <div style="background-color: #f9f9f9;border-top: 1px solid rgb(151, 148, 148);border-bottom: 1px solid rgb(151, 148, 148);padding-left: 30px;">
-        <p>Home / Book a cleaner</p>
+        <p>Home / Book a cleaning</p>
       </div>
 <div id="talk2" style="background-color: #fff;margin-top: 20px;">
 <div>
- <form action="">
-    <label for="">Choose a service</label><br>
-    <select name="cleaning-services" id="cleaning-services">
+  <form onsubmit="return sendEmail(event)">
+    <label for="name">Your Name*</label><br>
+    <input type="text" id="name" name="name" required><br>
+  
+    <label for="phone">Your Phone*</label><br>
+    <input type="tel" id="phone" name="phone" required><br>
+  
+    <label for="email">Email*</label><br>
+    <input type="email" id="email" name="email" required><br>
+  
+    <label for="postcode">Postcode*</label><br>
+    <input type="number" id="postcode" name="postcode" required><br>
+  
+    <label for="cleaning-services">Select a Service*</label><br>
+    <select name="cleaning-services" id="cleaning-services" required>
       <option value="">Select a Service</option>
-      <option value="antiviral-sanitisation">Antiviral Sanitisation</option>
+      <option value="office-commercial-cleaning">Office & Commercial Cleaning</option>
+      <option value="home-cleaning">Home Cleaning</option>
+      <option value="airbnb-shortlet-cleaning">Airbnb/Short-Let Cleaning</option>
+      <option value="regular-cleaning">Regular Cleaning</option>
+      <option value="deep-cleaning">Deep Cleaning</option>
       <option value="end-of-tenancy-cleaning">End of Tenancy Cleaning</option>
-      <option value="one-off-deep-cleaning">One Off Deep Cleaning</option>
-      <option value="carpet-cleaning">Carpet Cleaning</option>
-      <option value="rug-cleaning">Rug Cleaning</option>
-      <option value="upholstery-cleaning">Upholstery Cleaning</option>
-      <option value="oven-cleaning">Oven Cleaning</option>
       <option value="window-cleaning">Window Cleaning</option>
-      <option value="after-builders-cleaning">After Builders Cleaning</option>
-      <option value="domestic-cleaning">Domestic Cleaning</option>
-      <option value="all-cleaning-services">ALL Cleaning Services</option>
-  </select><br>
-
-  <label for="">Please tell us about your place*</label><br>
-  <select name="" id="">
-    <option value="">Studio</option>
-    <option value="">House/Flat</option>
-  </select><br>
-<label for="">Which floor is the property located at?</label><br>
-<select name="" id="">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-  <option value="11">11</option>
-  <option value="12">12</option>
-  <option value="13">13</option>
-  <option value="14">14</option>
-  <option value="15">15</option>
-  <option value="16">16</option>
-  <option value="17">17</option>
-  <option value="18">18</option>
-  <option value="19">19</option>
-  <option value="20">20</option>
-</select><br>
-<label for="">Is there a lift in the building?</label><br>
-<select name="" id="">
-  <option value="yes">yes</option>
-  <option value="no">no</option>
-</select><br>
-<label for="">Do you have a parking space?</label><br>
-<select name="" id="">
-  <option value="free">free</option>
-  <option value="paid">paid</option>
-  <option value="permit">permit</option>
-  <option value="I dont know">I dont know</option>
-</select><br>
-
-<label for="">Name</label><br>
-<input type="text" name="" id=""><br>
-<label for="">Phone</label><br>
-<input type="phone" name="" id=""><br>
-<label for="">Email</label><br>
-<input type="email" name="" id=""><br>
-<label for="">Preferred date</label><br>
-<input type="date"><br>
-<label for="">Preferred Time</label><br>
-<select name="" id="">
-  <option value="AM">AM</option>
-  <option value="PM">PM</option>
-  <option value="Flexible">Flexible</option>
-</select><br>
+      <option value="upholstery-carpet-cleaning">Upholstery & Carpet Cleaning</option>
+      <option value="post-construction-cleaning">Post-Construction Cleaning</option>
+      <option value="move-in-move-out-cleaning">Move-In/Move-Out Cleaning</option>
+      <option value="after-party-event-cleaning">After-Party/Event Cleaning</option>
+      <option value="kitchen-deep-cleaning">Kitchen Deep Cleaning</option>
+    </select><br>
+    
+  
+    <label for="preferable-time">Preferable Time*</label><br>
+    <select name="preferable-time" id="preferable-time" required>
+      <option value="">Flexible</option>
+      <option value="AM">AM</option>
+      <option value="PM">PM</option>
+    </select><br>
 </div>
+
+
+
 <div>
 
-<label for="">If you have additional notes, please add them below
-</label><br>
-<textarea name="" id=""></textarea>
+  <label for="additional-notes">If you have additional notes please, add them below*</label><br>
+  <textarea name="additional-notes" id="additional-notes" required></textarea><br><br>
 
 <p><b>Please note:*</b></p>
 <p>Filling this form does not confirm finalization of the booking process. Our customer support will do the utmost to reply to you with a quotation and available slots as soon as possible.
 </p>
 
-<p><input type="checkbox" name="" id="">
-I understand and
-  I have read and agree with the privacy policy of the site</p>
-  <button><a href="book.html">BOOK NOW</a></button>
+
+  <button type="submit">BOOK NOW</button>
 </div>
 </div>
 
  </form>
+ <script>
+  function sendEmail(event) {
+    event.preventDefault();
 
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const postcode = document.getElementById('postcode').value;
+    const cleaningServices = document.getElementById('cleaning-services').value;
+    const preferableTime = document.getElementById('preferable-time').value;
+    const additionalNotes = document.getElementById('additional-notes').value;
+
+    const subject = encodeURIComponent("New Service Request");
+    const body = encodeURIComponent(
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nPostcode: ${postcode}\nService Requested: ${cleaningServices}\nPreferable Time: ${preferableTime}\nAdditional Notes: ${additionalNotes}`
+    );
+    
+    window.location.href = `mailto:admin@crystalkleenservices.com?subject=${subject}&body=${body}`;
+  }
+</script>
 
 
  <footer>
@@ -161,46 +145,59 @@ I understand and
     <h3>USEFUL LINKS</h3>
     <ul id="ul">
       <li><a href="index.html">Home</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
       <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Get a Quote</a></li>
-      <li><a href="book.html">Book a Cleaner</a></li>
     </ul>
-  </div>
-  <div>
-    <h3>OUR SERVICES</h3>
-    <ul id="ul">
-      <li><a href="antiviralSanitisation.html">Antiviral Sanitisation</a></li>
-      <li><a href="end_of_tenancy.html">End of Tenancy Cleaning</a></li>
-      <li><a href="one-off-cleaning.html">One Off Deep Cleaning</a></li>
-      <li><a href="carpetCleaning.html">Carpet Cleaning</a></li>
-      <li><a href="rugcleaning.html">Rug Cleaning</a></li>
-      <li><a href="UpholsteryCleaning.html">Upholstery Cleaning</a></li>
-      <li><a href="oven-cleaning.html">Oven Cleaning</a></li>
-      <li><a href="windows_cleaning.html">Window Cleaning</a></li>
-      <li><a href="after_builders.html">After Builders Cleaning</a></li>
-      <li><a href="domestic_cleaning.html">Domestic Cleaning</a></li>
-      <li><a href="services.html">ALL Cleaning Services</a></li>
-    </ul>
+    <h3>Our Socials</h3>
+    <a style="font-size:25px;color:#ffc107;padding-right: 20px;" href="https://www.facebook.com/share/1DeXg3pNTD/?mibextid=wwXIfr" target="_blank"><i class="fa fa-facebook-f"></i></a>
+    <a style="font-size:25px;color:#ffc107;padding-right: 20px;" href="https://www.instagram.com/crystalkleen.services?igsh=MXRnMHN6MnVzMGpnZg%3D%3D&utm_source=qr" target="_blank" ><i class="fa fa-instagram"></i></a>
+
   </div>
 
   <div>
-    <h3>The Happy House Cleaning</h3>
-   <p>Address</p> 
-<p>69 Hazelwood Avenue, Morden, London, GB, SM4 5RS</p>
-<p>Phone: <span style="color: yellow;">020 7101 4326</span>  </p>
-<p>office@thehappyhousecleaning.co.uk</p>
+    <h3>OUR SERVICES</h3>
+    <ul id="ul">   
+      <li><a href="">Office & Commercial Cleaning</a></li>
+      <li><a href="">Home Cleaning</a></li>
+      <li><a href="">Airbnb/Short-Let Cleaning</a></li>
+      <li><a href="">Regular Cleaning</a></li>
+      <li><a href="">Deep Cleaning</a></li>
+      <li><a href="">End of Tenancy Cleaning</a></li>
+      <li><a href="">Window Cleaning</a></li>
+      <li><a href="">Upholstery & Carpet Cleaning</a></li>
+      <li><a href="">Post-Construction Cleaning</a></li>
+      <li><a href="">Move-In/Move-Out Cleaning</a></li>
+      <li><a href="">After-Party/Event Cleaning</a></li>
+      <li><a href="">Kitchen Deep Cleaning</a></li>
+      </ul>
+  </div>
+
+  <div>
+    <h3>Crystal Kleen Services</h3>
+   
+    <p><i class="fa fa-phone" style="font-size:15px;color:#ffc107;padding-right: 10px;"></i><span>+44 7376 492639, +44 7585 144247</span>  </p>
+    <p><a style="text-decoration: none;color: #f9f9f9;" href="mailto:info@crystalkleenservices.com"><i class="fa fa-envelope" style="font-size:15px;color:#ffc107;padding-right: 10px;"></i>info@crystalkleenservices.com</a></p>
+    <p><a style="text-decoration: none;color: #f9f9f9;" href="mailto:enquiry@crystalkleenservices.com"><i class="fa fa-envelope" style="font-size:15px;color:#ffc107;padding-right: 10px;"></i>enquiry@crystalkleenservices.com</a></p> <hr>
+<h3>Office hours</h3>
+
+<p  style="color: #ffc107;">Monday to Saturday</p>
+
+<p>9:00 am to 6:00 pm</p>
+
+<p  style="color: #ffc107;">Sunday</p>
+
+<p>2:00 pm to 6:00 pm</p>
   </div>
 
   <div>
     <h3>Customers first
     </h3>
-  <p>We at The Happy House Cleaning provide high-quality cleaning services to residents and business owners in London.</p>  
-<p>Our local cleaners are vetted and insured, trained to deal with any task – from carpet or domestic cleaning to end of tenancy cleaning. Our simple booking process allows you to get a cleaner fast and easy. Emergency booking and same day cleaning now available!
+  <p>We at Crystal Kleen Services provide high-quality cleaning services to residents and business owners</p>  
+<p>Our local cleaners are vetted and insured, trained to deal with any task – from carpet or domestic cleaning. Our simple booking process allows you to get a cleaner fast and easy. 
   </p>
   <img src="images/HH_T-footer_pic-300x68.png" alt="">
 </div>
-
 </footer>
       <div style="background-color:#f9f9f9 ;padding: 20px;text-align: center;">
         © Copyright 2023 | thehappyhousecleaning.co.uk | All Rights Reserved | Terms & Conditions | Privacy Policy

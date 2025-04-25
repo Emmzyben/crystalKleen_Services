@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Kleen Services Service</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
      <link rel="shortcut icon" href="images/logo.png">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +21,7 @@
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
-                    
+                    <li><a href="reviews.php">Reviews</a></li>
                     <li ><a href="contact.html" id="show">Contact Us</a></li>
                     <li></li>
                  </ul>
@@ -51,6 +51,7 @@
         <a href="index.html">Home</a>
          <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
+        <a href="reviews.php">Reviews</a>
         <a href="contact.html">Contact Us</a>
          </div>
        
@@ -70,37 +71,39 @@
  <p><b>Business name:</b></p> 
  <p>Crystal Kleen Services</p> 
   <p><b>Phone:</b> +44 7585 144247,+44 7376 492639</p> 
-  <p><b>E-mail:</b> crystalkleenservicesuk@gmail.com</p> 
+  <p><b>E-mail:</b><a href="mailto:info@crystalkleenservices.com">info@crystalkleenservices.com</a> </p> 
+  <p><b>E-mail:</b><a href="mailto:enquiry@crystalkleenservices.com">enquiry@crystalkleenservices.com</a> </p> 
  
  <img src="images/Mariya-1024x683.jpg" alt="">
 </div>
 <div>
   <h3>Our Services:</h3>
   <ul>
-    <li><a href="/carpet-cleaning">Carpet Cleaning</a></li>
-    <li><a href="/upholstery-cleaning">Upholstery Cleaning</a></li>
-    <li><a href="/window-cleaning">Window Cleaning</a></li>
-    <li><a href="/sofa-cleaning">Sofa Cleaning</a></li>
-    <li><a href="/end-of-tenancy-cleaning">End of Tenancy Cleaning</a></li>
-    <li><a href="/one-off-cleaning">One off Cleaning</a></li>
-    <li><a href="/office-cleaning">Office Cleaning</a></li>
-    <li><a href="/oven-cleaning">Oven Cleaning</a></li>
-    <li><a href="/curtain-cleaning">Curtain Cleaning</a></li>
-    <li><a href="/mattress-cleaning">Mattress Cleaning</a></li>
+    <li><a href="">Office & Commercial Cleaning</a></li>
+    <li><a href="">Home Cleaning</a></li>
+    <li><a href="">Airbnb/Short-Let Cleaning</a></li>
+    <li><a href="">Regular Cleaning</a></li>
+    <li><a href="">Deep Cleaning</a></li>
+    <li><a href="">End of Tenancy Cleaning</a></li>
+    <li><a href="">Window Cleaning</a></li>
+    <li><a href="">Upholstery & Carpet Cleaning</a></li>
+    <li><a href="">Post-Construction Cleaning</a></li>
+    <li><a href="">Move-In/Move-Out Cleaning</a></li>
+    <li><a href="">After-Party/Event Cleaning</a></li>
+    <li><a href="">Kitchen Deep Cleaning</a></li>
   </ul>
 </div>
 <div>
-  <h3>Address:</h3>
+  <h3>Office Hours:</h3>
 
-<p  style="color: #ffc107;">Monday to Friday</p>
-
-<p>9:00 am to 6:00 pm</p>
-
-<p  style="color: #ffc107;">Saturday</p>
+<p  style="color: #ffc107;">Monday to Saturday</p>
 
 <p>9:00 am to 6:00 pm</p>
 
-<p  style="color: #ffc107;">Closed on Sundays</p>
+<p  style="color: #ffc107;">Sunday</p>
+
+<p>2:00 pm to 6:00 pm</p>
+
   </div>
 
 </div>
@@ -108,54 +111,43 @@
 
 <div id="talk2">
   <div>
- <form action="">
-  <label for="">Your Name*</label><br>
-  <input type="text"><br>
-
-  <label for="">Your Phone*</label><br>
-  <input type="tel"><br>
-
-  <label for="">Email*</label><br>
-  <input type="email"><br>
-
-  <label for="">Postcode*</label><br>
-  <input type="number"><br>
-
-  <label for="">Select a Service*</label><br>
-  <select name="cleaning-services" id="cleaning-services">
-    <option value="">Select a Service</option>
-    <option value="antiviral-sanitisation">Antiviral Sanitisation</option>
-    <option value="end-of-tenancy-cleaning">End of Tenancy Cleaning</option>
-    <option value="one-off-deep-cleaning">One Off Deep Cleaning</option>
-    <option value="carpet-cleaning">Carpet Cleaning</option>
-    <option value="rug-cleaning">Rug Cleaning</option>
-    <option value="upholstery-cleaning">Upholstery Cleaning</option>
-    <option value="oven-cleaning">Oven Cleaning</option>
-    <option value="window-cleaning">Window Cleaning</option>
-    <option value="after-builders-cleaning">After Builders Cleaning</option>
-    <option value="domestic-cleaning">Domestic Cleaning</option>
-    <option value="all-cleaning-services">ALL Cleaning Services</option>
-</select>
-<br>
-
-  <label for="">Preferable Time*</label><br>
-  <select name="" id="">
-    <option value="">Flexible</option>
-    <option value="">AM</option>
-    <option value="">PM</option>
-  </select><br>
-
-  <label for=""> If you have additional notes please, add them below*</label>
-  <textarea name="" id=""></textarea><br><br>
-
-  <label for=""> Disclaimer* I have read and agree with the privacy policy of the site</label><br>
-  <select name="" id="">
-    <option value="">Yes</option>
-    <option value="">No</option>
-  </select>
-<br>
-  <button class="btn">Submit</button>
- </form>
+    <form onsubmit="return sendEmail(event)">
+      <label for="name">Your Name*</label><br>
+      <input type="text" id="name" name="name" required><br>
+    
+      <label for="phone">Your Phone*</label><br>
+      <input type="tel" id="phone" name="phone" required><br>
+    
+      <label for="email">Email*</label><br>
+      <input type="email" id="email" name="email" required><br>
+    
+    
+      <label for="message">If you have additional notes please, add them below*</label><br>
+      <textarea name="message" id="message" required></textarea><br><br>
+    
+      
+    
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    
+    <script>
+      function sendEmail(event) {
+        event.preventDefault();
+    
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+    
+        const subject = encodeURIComponent("New Enquiry");
+        const body = encodeURIComponent(
+          `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nmessage: ${message}`
+        );
+        
+        window.location.href = `mailto:enquiry@crystalkleenservices.com?subject=${subject}&body=${body}`;
+      }
+    </script>
+    
   </div>
   <div>
    <h3>CALL, EMAIL OR WRITE TO US – AS YOU PREFER</h3> 
@@ -175,41 +167,45 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Get a Quote</a></li>
     </ul>
+    <h3>Our Socials</h3>
+    <a style="font-size:25px;color:#ffc107;padding-right: 20px;" href="https://www.facebook.com/share/1DeXg3pNTD/?mibextid=wwXIfr" target="_blank"><i class="fa fa-facebook-f"></i></a>
+    <a style="font-size:25px;color:#ffc107;padding-right: 20px;" href="https://www.instagram.com/crystalkleen.services?igsh=MXRnMHN6MnVzMGpnZg%3D%3D&utm_source=qr" target="_blank" ><i class="fa fa-instagram"></i></a>
+
   </div>
   <div>
     <h3>OUR SERVICES</h3>
-    <ul id="ul">
-      <li><a >Antiviral Sanitisation</a></li>
-      <li><a >End of Tenancy Cleaning</a></li>
-      <li><a >One Off Deep Cleaning</a></li>
-      <li><a >Carpet Cleaning</a></li>
-      <li><a >Rug Cleaning</a></li>
-      <li><a >Upholstery Cleaning</a></li>
-      <li><a >Oven Cleaning</a></li>
-      <li><a >Window Cleaning</a></li>
-      <li><a >After Builders Cleaning</a></li>
-      <li><a >Domestic Cleaning</a></li>
-      <li><a href="services.html">ALL Cleaning Services</a></li>
-    </ul>
+    <ul id="ul">   
+      <li><a href="">Office & Commercial Cleaning</a></li>
+      <li><a href="">Home Cleaning</a></li>
+      <li><a href="">Airbnb/Short-Let Cleaning</a></li>
+      <li><a href="">Regular Cleaning</a></li>
+      <li><a href="">Deep Cleaning</a></li>
+      <li><a href="">End of Tenancy Cleaning</a></li>
+      <li><a href="">Window Cleaning</a></li>
+      <li><a href="">Upholstery & Carpet Cleaning</a></li>
+      <li><a href="">Post-Construction Cleaning</a></li>
+      <li><a href="">Move-In/Move-Out Cleaning</a></li>
+      <li><a href="">After-Party/Event Cleaning</a></li>
+      <li><a href="">Kitchen Deep Cleaning</a></li>
+      </ul>
   </div>
 
   <div>
     <h3>Crystal Kleen Services</h3>
-   
     <p><i class="fa fa-phone" style="font-size:15px;color:#ffc107;padding-right: 10px;"></i><span>+44 7376 492639, +44 7585 144247</span>  </p>
-    <p><i class="fa fa-envelope" style="font-size:15px;color:#ffc107;padding-right: 10px;"></i>crystalkleenservicesuk@gmail.com</p>
-
+    <p><a style="text-decoration: none;color: #f9f9f9;" href="mailto:info@crystalkleenservices.com"><i class="fa fa-envelope" style="font-size:15px;color:#ffc107;padding-right: 10px;"></i>info@crystalkleenservices.com</a></p>
+    <p><a style="text-decoration: none;color: #f9f9f9;" href="mailto:enquiry@crystalkleenservices.com"><i class="fa fa-envelope" style="font-size:15px;color:#ffc107;padding-right: 10px;"></i>enquiry@crystalkleenservices.com</a></p>
+    <hr>
 <h3>Office hours</h3>
 
-<p  style="color: #ffc107;">Monday to Friday</p>
+<p  style="color: #ffc107;">Monday to Saturday</p>
 
 <p>9:00 am to 6:00 pm</p>
 
-<p  style="color: #ffc107;">Saturday</p>
+<p  style="color: #ffc107;">Sunday</p>
 
-<p>9:00 am to 6:00 pm</p>
+<p>2:00 pm to 6:00 pm</p>
 
-<p  style="color: #ffc107;">Closed on Sundays</p>
   </div>
 
   <div>
